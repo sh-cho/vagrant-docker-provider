@@ -3,10 +3,7 @@ FROM centos:centos7
 RUN yum -y update; yum clean all
 RUN yum -y install openssh-server openssh-clients passwd sudo; yum clean all
 RUN mkdir /var/run/sshd
-RUN ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N ''
-RUN ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -N ''
-RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N ''
-RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
+RUN ssh-keygen -A
 
 RUN useradd --create-home -s /bin/bash vagrant
 RUN echo -e "vagrant\nvagrant" | (passwd --stdin vagrant)
