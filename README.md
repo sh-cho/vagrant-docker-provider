@@ -1,6 +1,6 @@
 # vagrant-docker-provider
 
-![Docker Pulls](https://img.shields.io/docker/pulls/seonghyeon/vagrant-docker-provider?logo=docker&logoColor=white)
+[![Docker Pulls](https://img.shields.io/docker/pulls/seonghyeon/vagrant-docker-provider?logo=docker&logoColor=white)](https://hub.docker.com/r/seonghyeon/vagrant-docker-provider)
 
 ## List
 
