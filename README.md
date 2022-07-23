@@ -1,5 +1,7 @@
 # vagrant-docker-provider
 
+![Docker Pulls](https://img.shields.io/docker/pulls/seonghyeon/vagrant-docker-provider?logo=docker&logoColor=white)
+
 ## List
 
 | OS                     | image                                                    | size                                                                                                                  |
@@ -20,4 +22,3 @@ make build IMAGE_TAG=(OS)
 ## credits
 - https://github.com/mcwarman/vagrant-docker-provider
 - https://github.com/rofrano/vagrant-docker-provider
-
