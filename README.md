@@ -4,8 +4,8 @@ tweak of https://github.com/mcwarman/vagrant-docker-provider
 
 ## List
 
-|         OS         |                         image                        |
-|:------------------:|:----------------------------------------------------:|
+| OS                 | image                                                |
+|--------------------|------------------------------------------------------|
 | CentOS 7           | `seonghyeon/vagrant-docker-provider:centos7`         |
 | CentOS 7 (systemd) | `seonghyeon/vagrant-docker-provider:centos7-systemd` |
 
