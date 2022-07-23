@@ -15,7 +15,7 @@ RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == system
 RUN mkdir /var/run/sshd
 RUN ssh-keygen -A
 
-RUN systemctl enable ssh.service; \
+RUN systemctl enable sshd.service; \
     sed -i '/^session.*pam_loginuid.so/s/^session/# session/' /etc/pam.d/sshd; \
     sed -i 's/Defaults.*requiretty/#Defaults requiretty/g' /etc/sudoers; \
     rm /usr/lib/tmpfiles.d/systemd-nologin.conf;
@@ -31,6 +31,5 @@ ADD https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub 
 RUN chmod 600 /home/vagrant/.ssh/authorized_keys
 RUN chown -R vagrant:vagrant /home/vagrant/.ssh
 
-EXPOSE 22
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["usr/sbin/init"]
